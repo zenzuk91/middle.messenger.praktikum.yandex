@@ -1,0 +1,40 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/pages/index.pug",
+    "build": "parcel build dist/pages/index.pug",
+    "postcss": "postcss input.css -u postcss-utilities -o static/stylesheet/output.css"
+  },
+  "engines": {
+    "node": ">=16.4.1",
+    "npm": "~8.5.0"
+  },
+  "keywords": [],
+  "author": "zenzuk",
+  "license": "ISC",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "^1.0.2",
+    "@parcel/bundler-default": "^2.3.2",
+    "@parcel/transformer-babel": "^2.3.2",
+    "@parcel/transformer-inline-string": "^2.3.2",
+    "@parcel/transformer-js": "^2.3.2",
+    "@parcel/transformer-pug": "^2.3.2",
+    "@parcel/transformer-typescript-types": "^2.3.2",
+    "@parcel/transformer-worklet": "^2.3.2",
+    "parcel": "^2.3.2",
+    "postcss-cli": "^9.1.0",
+    "postcss-utilities": "^0.8.4"
+  },
+  "dependencies": {
+    "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
+    "@highlightjs/cdn-assets": "^11.5.0",
+    "@parcel/transformer-css": "^2.3.2",
+    "@parcel/transformer-sass": "^2.3.2",
+    "express": "^4.17.3",
+    "highlight.js": "^10.4.0",
+    "pug": "^3.0.2"
+  }
+}
