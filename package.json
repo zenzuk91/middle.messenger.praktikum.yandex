@@ -2,18 +2,11 @@
   "name": "test",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
   "source": "src/pages/index.pug",
   "scripts": {
     "dev": "parcel",
     "build": "parcel build",
     "start": "npm run build && node ./server.js",
-=======
-  "main": "index.js",
-  "scripts": {
-    "dev": "parcel src/pages/index.pug",
-    "build": "parcel build dist/pages/index.pug",
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
     "postcss": "postcss input.css -u postcss-utilities -o static/stylesheet/output.css"
   },
   "engines": {
@@ -32,7 +25,6 @@
     "@parcel/transformer-pug": "^2.3.2",
     "@parcel/transformer-typescript-types": "^2.3.2",
     "@parcel/transformer-worklet": "^2.3.2",
-<<<<<<< HEAD
     "buffer": "^6.0.3",
     "crypto-browserify": "^3.12.0",
     "events": "^3.3.0",
@@ -45,11 +37,6 @@
     "querystring-es3": "^0.2.1",
     "stream-http": "^3.2.0",
     "url": "^0.11.0"
-=======
-    "parcel": "^2.3.2",
-    "postcss-cli": "^9.1.0",
-    "postcss-utilities": "^0.8.4"
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
   },
   "dependencies": {
     "@anikin/parcel-transformer-handlebars-precompile": "^1.0.1",
