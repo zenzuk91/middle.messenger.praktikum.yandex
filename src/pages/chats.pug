@@ -1,7 +1,24 @@
+<<<<<<< HEAD
 html(lang="ru")
   include header.pug
     link(rel="stylesheet", href="../styles/chats.sass")
     title= "Чат"
+=======
+mixin list(id, ...items)
+    ul(id= id)
+      each item in items
+        li 
+          a(href="./404.html")  
+            img.avatar(src="../../static/img/img_chats.png", alt="Фото профиля")
+            p.profile_name Имя пользователя 
+              span= item
+            p.date_message Пт
+            p.last_message Последнее сообщение 
+              span= item 
+html(lang="ru")
+  head
+   include header.pug
+>>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
   body
     div#left_column
       div.profile
@@ -9,10 +26,17 @@ html(lang="ru")
         div 
           p Zenzuk
           a(href="#") Избранное 
+<<<<<<< HEAD
         a(href="./profile.pug") Профиль>
       input#search(type="search", placeholder="Поиск")
       div.chats_column
         include dialogs.pug
+=======
+        a(href="./profile.html") Профиль>
+      input#search(type="search", placeholder="Поиск")
+      div.chats_column
+        +list("chats", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+>>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
           
     div#right_column
       #menu_top 
