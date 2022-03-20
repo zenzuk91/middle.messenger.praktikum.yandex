@@ -1,0 +1,19 @@
+html(lang="ru")
+  include header.pug
+    title= "Регистрация в Zenzuk"
+  body
+    div.main.registration  
+      h1 Регистрация
+      form(action="#", method="post")
+        div.contacts.reg
+          input#email(type="email" placeholder='Почта')
+          input#login(type="text" placeholder='Логин')
+          input#first_name(type="text" placeholder='Имя')
+          input#second_name(type="text" placeholder='Фамилия')
+          input#phone(type="text" placeholder='Телефон')
+          input#password(type="password" placeholder='Пароль')
+          input#password_repeat(type="password" placeholder='Пароль(еще раз)')
+        a(href="./chats.pug") 
+          input(type="button" value="Зарегистрироваться")
+      a(href="./login.pug") Войти
+  

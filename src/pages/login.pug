@@ -1,0 +1,16 @@
+html(lang="ru")
+  include header.pug
+    title= "Добро пожаловать в Zenzuk"
+  body
+      div.outer
+        div.main 
+          h1 Вход 
+          form(action="", method="post")
+            div.contacts 
+              label(for="login")  
+              input#login(type="text" name="login" placeholder='Логин')
+              label(for="password") 
+              input#password(type="text" name="password" placeholder='Пароль')
+            a(href="./chats.pug") 
+              input(type="button", value="Авторизоваться")
+          a(href="./registration.pug") нет аккаунта?

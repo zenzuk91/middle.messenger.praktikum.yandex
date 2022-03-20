@@ -1,0 +1,49 @@
+html(lang="ru")
+  include header.pug
+    link(rel="stylesheet", href="../styles/chats.sass")
+    title= "Чат"
+  body
+    div#left_column
+      div.profile
+        img.avatar(src="../../static/img/img_chats.png", alt="Фото профиля")
+        div 
+          p Zenzuk
+          a(href="#") Избранное 
+        a(href="./profile.pug") Профиль>
+      input#search(type="search", placeholder="Поиск")
+      div.chats_column
+        include dialogs.pug
+          
+    div#right_column
+      #menu_top 
+        img.avatar(src="../../static/img/img_chats.png", alt="Фото профиля")
+        p Имя пользователя
+        div.mobile_menu
+          ul 
+            li  
+              img(src="../../static/img/menu.png", alt="")
+              div 
+              ul 
+                li
+                  a(href="#")  Добавить пользователя
+                li 
+                  a(href="#")  Удалить пользователя
+                li  
+                  a(href="#")  Посмотреть материалы беседы 
+      #history 
+      #create_message
+        #download_file
+          ul 
+            li  
+              div 
+              img(src="../../static/img/download.png", alt="")
+              ul 
+                li
+                  a(href="#")  Фото или видео
+                li 
+                  a(href="#")  Файл
+                li  
+                  a(href="#") Локация 
+        
+        input#message(type="text" placeholder="Сообщение")  
+        input#send_message(type="button" value=">") 
