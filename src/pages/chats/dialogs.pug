@@ -2,8 +2,8 @@ mixin list(id, ...items)
     ul(id= id)
       each item in items
         li 
-          a(href="./404.pug")  
-            img.avatar(src="../../static/img/img_chats.png", alt="Фото профиля")
+          a(href="../404.pug")  
+            img.avatar(src="../../../static/img/img_chats.png", alt="Фото профиля")
             p.profile_name Имя пользователя 
               span= item
             p.date_message Пт
