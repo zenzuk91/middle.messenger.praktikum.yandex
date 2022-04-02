@@ -1,4 +1,6 @@
 Проект сейчас находится на этапе MVP работают кнопки войти и зарегистрироваться(данные вводить не нужно). Чтобы при открытии чата появится ошибка 404. На странице профиля если попытаться изменить данные это вызовет ошибку 500.
+ ссылка на первый pull requests https://github.com/zenzuk91/middle.messenger.praktikum.yandex/pull/1
+
 
 Дизайн-проект можно посмотреть по ссылке https://www.figma.com/file/OvZHFHkCe8HWUF0GcjF1Kd/Chat?node-id=1%3A498
 
@@ -25,4 +27,3 @@ sass --watch src/styles:dist отслживание изменений в фай
 pug src/ --out dist --pretty отслеживание изменений в файлах проекта
 
 npm run dev запуск проекта для разработки
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
