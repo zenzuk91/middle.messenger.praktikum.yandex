@@ -1,0 +1,41 @@
+html(lang="ru")
+  include ../header.pug 
+    link(href="../../styles/style.sass", rel="stylesheet", type='text/css')
+    link(rel="stylesheet", href="./profile.sass")
+    title= "Редактирование профиля"
+  body
+      div#back 
+        a(href="../chats/chats.pug")  
+
+          div <
+      div.profile_main 
+        #avatar 
+          input(type="file", name="Загрузить новый аватар")
+          img.profile_avatar(src="../../../static/img/profile_avatar.png", alt="Фото профиля")
+        h2 Zenzuk
+        div.profile_contacts 
+          div Почта
+            input#email(type="email" disabled value='pochta@ya.ru' )
+          div Логин
+            input#login(type="text" disabled value='zenzuk')
+          div Имя
+            input#first_name(type="text" disabled value='Андрей')
+          div Фамилия
+            input#second_name(type="text" disabled value='Колесников')
+          div Имя в чате
+            input#second_name(type="text" disabled value='zenzuk')
+          div Телефон
+            input#phone(type="text" disabled value='79885373227')
+          div Старый пароль
+            input#oldpassword(type="password" disabled value='Новый пароль') 
+          div Новый пароль
+            input#newPassword(type="password" disabled value='')
+          div Новый пароль (еще раз)
+            input#password_repeat(type="password" disabled value='')
+          div.edit
+            a(href="../500.pug") Изменить данные
+          div
+            a(href="../500.pug") Изменить пароль
+          a#quit(href="../login.pug") Выйти
+
+  
