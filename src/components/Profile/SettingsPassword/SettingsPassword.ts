@@ -3,7 +3,10 @@ import { Block } from '../../../utils/Block/index';
 import { settingsPasswordTemplate } from './SettingsPassword.template';
 import SettingsInput from '../../Input/SettingsInput/SettingsInput';
 import { SettingsPasswordProps } from './SettingsPassword.types';
+<<<<<<< HEAD
 import { PatternPassword } from '../../Const/Const';
+=======
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
 
 export default class SettingsPassword extends Block<SettingsPasswordProps> {
   public constructor(props: SettingsPasswordProps) {
@@ -23,7 +26,11 @@ export default class SettingsPassword extends Block<SettingsPasswordProps> {
           required: 'true',
           minlength: '8',
           maxlength: '40',
+<<<<<<< HEAD
           pattern: PatternPassword,
+=======
+          pattern: '((?=.*\\d)(?=.*[0-9])(?=.*[A-Z]).{8,40})',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
         }),
         newPasswordInput: new SettingsInput({
           labelName: 'Новый пароль',
@@ -33,7 +40,11 @@ export default class SettingsPassword extends Block<SettingsPasswordProps> {
           required: 'true',
           minlength: '8',
           maxlength: '40',
+<<<<<<< HEAD
           pattern: PatternPassword,
+=======
+          pattern: '((?=.*\\d)(?=.*[0-9])(?=.*[A-Z]).{8,40})',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
         }),
         confirmPasswordInput: new SettingsInput({
           labelName: 'Повторите новый пароль',
@@ -43,7 +54,11 @@ export default class SettingsPassword extends Block<SettingsPasswordProps> {
           required: 'true',
           minlength: '8',
           maxlength: '40',
+<<<<<<< HEAD
           pattern: PatternPassword,
+=======
+          pattern: '((?=.*\\d)(?=.*[0-9])(?=.*[A-Z]).{8,40})',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
         }),
       },
     );

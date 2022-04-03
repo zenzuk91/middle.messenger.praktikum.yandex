@@ -1,5 +1,9 @@
 import { compile } from 'pug';
+<<<<<<< HEAD
 import { Block } from '../../../utils/Block/index';
+=======
+import { Block } from '../../../utils/Block';
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
 import { error500Template } from './Error500.template';
 import { Error500Props } from './Error500.types';
 

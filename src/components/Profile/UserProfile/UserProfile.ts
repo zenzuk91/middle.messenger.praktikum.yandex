@@ -3,7 +3,10 @@ import { Block } from '../../../utils/Block/index';
 import { userProfileTemplate } from './UserProfile.template';
 import SettingsInput from '../../Input/SettingsInput/SettingsInput';
 import { UserProfileProps } from './UserProfile.types';
+<<<<<<< HEAD
 import { PatternEmail, PatternLogin, PatternName, PatternPhone } from '../../Const/Const';
+=======
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
 
 export default class UserProfile extends Block<UserProfileProps> {
   public constructor(props: UserProfileProps) {
@@ -22,7 +25,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           inputPlaceholder: 'Почта',
           required: 'true',
           minlength: '3',
+<<<<<<< HEAD
           pattern: PatternEmail,
+=======
+          pattern: '\\w+@[a-zA-Z_]+?\\.[a-zA-Z]{2,6}',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.email,
         }),
         loginInput: new SettingsInput({
@@ -33,7 +40,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           required: 'true',
           minlength: '3',
           maxlength: '20',
+<<<<<<< HEAD
           pattern: PatternEmail,
+=======
+          pattern: '[a-zA-Z0-9-_]*[a-zA-Z]{1}[a-zA-Z0-9-_]*',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.login,
         }),
         nameInput: new SettingsInput({
@@ -43,7 +54,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           inputPlaceholder: 'Имя',
           required: 'true',
           minlength: '3',
+<<<<<<< HEAD
           pattern: PatternName,
+=======
+          pattern: '^[A-ZА-ЯЁ]{1}[a-zа-яё-]+$',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.first_name,
 
         }),
@@ -54,7 +69,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           inputPlaceholder: 'Фамилия',
           required: 'true',
           minlength: '3',
+<<<<<<< HEAD
           pattern: PatternName,
+=======
+          pattern: '^[A-ZА-ЯЁ]{1}[a-zа-яё-]+$',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.second_name,
         }),
         nameInChatInput: new SettingsInput({
@@ -65,7 +84,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           required: 'true',
           minlength: '3',
           maxlength: '20',
+<<<<<<< HEAD
           pattern: PatternLogin,
+=======
+          pattern: '[a-zA-Z0-9-_А-ЯЁа-яё]+',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.display_name,
         }),
         phoneInput: new SettingsInput({
@@ -75,7 +98,11 @@ export default class UserProfile extends Block<UserProfileProps> {
           inputPlaceholder: 'Телефон',
           required: 'true',
           minlength: '3',
+<<<<<<< HEAD
           pattern: PatternPhone,
+=======
+          pattern: '^\\+?[0-9]{10,15}$',
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           value: props.userInfo!.phone,
         }),
       },

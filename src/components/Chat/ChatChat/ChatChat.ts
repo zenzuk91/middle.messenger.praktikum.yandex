@@ -1,14 +1,10 @@
 import { compile } from 'pug';
-<<<<<<< HEAD
-import { Block } from '../../../utils/Block/index';
-=======
 import { Block } from '../../../utils/Block';
->>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
-import { chatProfileTemplate } from './ChatProfile.template';
-import { ChatProfileProps } from './ChatProfile.types';
+import { chatChatTemplate } from './ChatChat.template';
+import { ChatChatProps } from './ChatChat.types';
 
-export default class ChatProfile extends Block<ChatProfileProps> {
-  public constructor(props: ChatProfileProps) {
+export default class ChatChat extends Block<ChatChatProps> {
+  public constructor(props: ChatChatProps) {
     super(
       'div',
       {
@@ -17,7 +13,7 @@ export default class ChatProfile extends Block<ChatProfileProps> {
           click: () => this.handleClick(),
         },
       },
-    ); 
+    );
   }
 
   public handleClick() {
@@ -32,6 +28,6 @@ export default class ChatProfile extends Block<ChatProfileProps> {
   }
 
  public render() {
-    return this.compile(compile(chatProfileTemplate), { ...this.props });
+    return this.compile(compile(chatChatTemplate), { ...this.props });
   }
 }

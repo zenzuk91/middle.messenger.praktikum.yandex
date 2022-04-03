@@ -1,7 +1,11 @@
 import { compile } from 'pug';
 import { Block } from '../../../utils/Block/index';
 import { chatTemplate } from './Chat.template';
+<<<<<<< HEAD
 import { ChatList } from '../ChatList/index';
+=======
+import { ChatChat } from '../ChatChat/index';
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
 import { ChatProfile } from '../ChatProfile/index';
 import ChatMessage from '../ChatMessage/ChatMessage';
 import { ChatMessageForm } from '../ChatMessageForm/index';
@@ -12,10 +16,15 @@ import AddGeoModal from '../../Modal/AddGeoModal/AddGeoModal';
 import AddFileModal from '../../Modal/AddFileModal/AddFileModal';
 import AddFotoModal from '../../Modal/AddFotoModal/AddFotoModal';
 import { ChatProps } from './Chat.types';
+<<<<<<< HEAD
 import ImgChats from '../../../../static/img/img_chats.png';
 import ImgTumba from '../../../../static/img/tumba.jpeg';
 
 
+=======
+import img_chats from '../../../../static/img/img_chats.png';
+import img_tumba from '../../../../static/img/tumba.jpeg';
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
 export default class Chat extends Block<ChatProps> {
   constructor() { 
     super(
@@ -23,7 +32,11 @@ export default class Chat extends Block<ChatProps> {
       {
         profileLinkTo: './profile.html',
         profileLinkText: 'Профиль',
+<<<<<<< HEAD
         avatarSrc: ImgChats,
+=======
+        avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
         userInfo: {
           first_name: 'Андрей',
           email: 'pochta@ya.ru',
@@ -34,50 +47,85 @@ export default class Chat extends Block<ChatProps> {
         },
           chatProfile: 
             new ChatProfile({
+<<<<<<< HEAD
               avatarSrc: ImgChats,
+=======
+              avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
               chatName: 'Zenzuk',
               chatFavorite: 'Избранное',
               profileLinkText: 'Профиль',
               profileLinkTo: './profile.html',
           }),
+<<<<<<< HEAD
         ChatList: [ 
           new ChatList({ 
             avatarSrc: ImgChats,
+=======
+        chatChat: [ 
+          new ChatChat({ 
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 1',
             chatLastMessage: 'Сообщение 1',
             chatDate: 'пт',
             chatMessageCount: '2'
           }),
+<<<<<<< HEAD
           new ChatList({
             avatarSrc: ImgChats,
+=======
+          new ChatChat({
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 2',
             chatLastMessage: 'Сообщение 1',
             chatDate: 'пт',
             chatMessageCount: '1',
           }),
+<<<<<<< HEAD
           new ChatList({
             avatarSrc: ImgChats,
+=======
+          new ChatChat({
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 3',
             chatLastMessage: 'Сообщение 1',
             chatDate: 'пт',
             chatMessageCount: '21',
           }),
+<<<<<<< HEAD
           new ChatList({
             avatarSrc: ImgChats,
+=======
+          new ChatChat({
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 4',
             chatLastMessage: 'Изображение',
             chatDate: 'пт',
             chatMessageCount: '15',
           }),
+<<<<<<< HEAD
           new ChatList({
             avatarSrc: ImgChats,
+=======
+          new ChatChat({
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 5',
             chatLastMessage: 'Сообщение 1',
             chatDate: 'пт',
             chatMessageCount: '2',
           }),
+<<<<<<< HEAD
           new ChatList({
             avatarSrc: ImgChats,
+=======
+          new ChatChat({
+            avatarSrc: img_chats,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
             chatName: 'Пользователь 6',
             chatLastMessage: 'Сообщение 1',
             chatDate: 'пт',
@@ -109,7 +157,11 @@ export default class Chat extends Block<ChatProps> {
           new ChatMessage({
             message: 'Привет!',
             time: 'ПТ',
+<<<<<<< HEAD
             imgSrc: ImgTumba,
+=======
+            imgSrc: img_tumba,
+>>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
           }),
           
           new ChatMessage({
