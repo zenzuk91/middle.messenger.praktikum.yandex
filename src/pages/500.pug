@@ -1,11 +1,7 @@
-html(lang="ru")
-
-  include header.pug
-    link(href="../styles/style.sass", rel="stylesheet", type='text/css')
-    title= 500
-  body
-    div.error
-      h1 500
-      h2 Скоро мы это исправим
-      a(href="./chats/chats.pug") Назад к чатам 
-
+extends ../components/header/header
+block templates
+  - const pageTitle = "500 - Ошибка сервера"
+  - const style = "../styles/error.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Errors/Error500/index.ts")

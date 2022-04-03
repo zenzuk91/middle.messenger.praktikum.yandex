@@ -1,11 +1,9 @@
-html(lang="ru")
+extends ../components/header/header
+block templates
+  - const pageTitle = "Страница не найдена - 404"
+  - const style = "../styles/error.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Errors/Error404/index.ts")
 
-  include header.pug
-    link(href="../styles/style.sass", rel="stylesheet", type='text/css')
-    title= 404
-  body
-    div.error
-      h1 404
-      h2 Вы всё сломали(
-      a(href="./chats/chats.pug") Назад к чатам 
 
