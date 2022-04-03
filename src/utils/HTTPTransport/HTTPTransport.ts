@@ -8,7 +8,7 @@ function queryStringify(data: Record<string, unknown>) {
   const keys = Object.keys(data);
   return keys.reduce((result, key, index) => `${result}${key}=${data[key]}${index < keys.length - 1 ? '&' : ''}`, '?');
 }
-
+ 
 export default class HTTPTransport {
   public get = (url: string, options: RequestOptions = {}) => this.request(url, { ...options, method: Methods.Get }, options.timeout);
 
