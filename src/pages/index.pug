@@ -1,7 +1,8 @@
-html(lang="ru")
-  include ./header.pug
-
-    title= "Главная страница"
-      
-  body
-     include ./login.pug
+extends ../components/header/header
+block templates
+  - const pageTitle = "Авторизация в Zenzuk"
+  - const style = "../styles/login.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Login/index.ts")
+    
