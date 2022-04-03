@@ -5,11 +5,8 @@ import SettingsButton from '../../Button/SettingsButton/SettingsButton';
 import SettingsPassword from '../SettingsPassword/SettingsPassword';
 import SettingsUser from '../UserProfile/UserProfile';
 import { SettingsProps } from './Settings.types';
-<<<<<<< HEAD
 import ImgAvatar from '../../../../static/img/profile_avatar.png'
-=======
-import img_avatar from '../../../../static/img/profile_avatar.png'
->>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
+
 export default class Settings extends Block<SettingsProps> {
   public constructor() {
     super(
@@ -17,11 +14,7 @@ export default class Settings extends Block<SettingsProps> {
       {
         formLinkText: 'Войти',
         linkTo: './index.html',
-<<<<<<< HEAD
         avatarImage: ImgAvatar,
-=======
-        avatarImage: img_avatar,
->>>>>>> 4c84c73e82371cfc4989c06f35afb88d265de301
         disabledUserInfoForm: 'true',
         userInfo: {
           first_name: 'Андрей',
