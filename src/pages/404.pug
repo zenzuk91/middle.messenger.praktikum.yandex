@@ -1,17 +1,9 @@
-html(lang="ru")
-<<<<<<< HEAD
-  include header.pug
-=======
-  head
-    include header.pug
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
-    title= 404
-  body
-    div.error
-      h1 404
-      h2 Вы всё сломали(
-<<<<<<< HEAD
-      a(href="./chats.pug") Назад к чатам 
-=======
-      a(href="./chats.html") Назад к чатам 
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
+extends ../components/header/header
+block templates
+  - const pageTitle = "Страница не найдена - 404"
+  - const style = "../styles/error.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Errors/Error404/index.ts")
+
+

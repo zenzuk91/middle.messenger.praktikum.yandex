@@ -1,0 +1,99 @@
+@import "./template"
+
+.form 
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  max-width: 540px
+  min-height: 450px
+  padding: 50px 30px 30px 30px
+  box-sizing: border-box
+  box-shadow: 0px 0px 6px rgb(0 0 0 / 14%)
+  border-radius: 12px
+  width: 340px
+  height: 660px
+
+.form_title 
+  margin: 0
+  padding: 0 0 40px 0
+  font-size: 20px
+  line-height: 20px
+  color: $text_color
+
+
+.form_form 
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+  height: 100%
+  padding-bottom: 14px
+
+
+.form_input-container 
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  width: 100%
+
+
+.form_label 
+  display: flex
+  flex-direction: column
+  align-items: start
+  justify-content: center
+  color: $text_color-gray
+  font-size: 9px
+  line-height: 9px
+  padding-bottom: 16px
+  width: 100%
+  text-align: right
+
+
+.form_input 
+  border: none
+  border-bottom: solid 1px $action-element_background-color
+  width: 100%
+  max-width: 280px
+  color: $text_color
+  padding: 8px 0 7px 0
+
+
+.form_input-error 
+  color: $text_color-error
+  padding-top: 7px
+  text-align: start
+
+
+.form_submit-button 
+  background-color: $action-element_background-color
+  width: 100%
+  max-width: 280px
+  height: 37px
+  color: $text_color-white
+  border: none
+  border-radius: 8px
+
+  &:hover 
+    cursor: pointer
+    background-color: $action-element_background-color_hover
+  
+
+
+.form_link 
+  text-decoration: none
+  color: $action-element_background-color
+  text-align: center
+  display: block
+  font-weight: 500
+  font-size: 11px
+  line-height: 11px
+  transition: all .5s ease
+
+  &:hover 
+    color: $text_color-gray_hover
+  
+

@@ -1,57 +1,8 @@
-<<<<<<< HEAD
-html(lang="ru")
-  include header.pug 
-    link(rel="stylesheet", href="../styles/profile.sass")
-    title= "Редактирование профиля"
-  body
-      div#back 
-        a(href="./chats.pug")  
-=======
-doctype html
-html(lang="ru")
-  head
-    meta(charset="utf-8")
-    title= "Редактирование профиля"
-    script(src='../modules/styles.js' type="module")
-  body
-      div#back 
-        a(href="./chats.html")  
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
-          div <
-      div.profile_main 
-        #avatar 
-          input(type="file", name="Загрузить новый аватар")
-          img.profile_avatar(src="../../static/img/profile_avatar.png", alt="Фото профиля")
-        h2 Zenzuk
-        div.profile_contacts 
-          div Почта
-            input#email(type="email" disabled value='pochta@ya.ru' )
-          div Логин
-            input#login(type="text" disabled value='zenzuk')
-          div Имя
-            input#first_name(type="text" disabled value='Андрей')
-          div Фамилия
-            input#second_name(type="text" disabled value='Колесников')
-          div Имя в чате
-            input#second_name(type="text" disabled value='zenzuk')
-          div Телефон
-            input#phone(type="text" disabled value='79885373227')
-          div Старый пароль
-            input#oldpassword(type="password" disabled value='Новый пароль') 
-          div Новый пароль
-            input#newPassword(type="password" disabled value='')
-          div Новый пароль (еще раз)
-            input#password_repeat(type="password" disabled value='')
-          div.edit
-<<<<<<< HEAD
-            a(href="./500.pug") Изменить данные
-          div
-            a(href="./500.pug") Изменить пароль
-          a#quit(href="./login.pug") Выйти
-=======
-            a(href="./500.html") Изменить данные
-          div
-            a(href="./500.html") Изменить пароль
-          a#quit(href="./login.html") Выйти
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
+extends ../components/header/header
+block templates
+  - const pageTitle = "Профиль"
+  - const style = "../styles/settings.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Profile/Settings/index.ts")
   

@@ -1,27 +1,8 @@
-html(lang="ru")
-<<<<<<< HEAD
-  include header.pug
-=======
-  head
-    include header.pug
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
-    title= "Добро пожаловать в Zenzuk"
-  body
-      div.outer
-        div.main 
-          h1 Вход 
-          form(action="", method="post")
-            div.contacts 
-              label(for="login")  
-              input#login(type="text" name="login" placeholder='Логин')
-              label(for="password") 
-              input#password(type="text" name="password" placeholder='Пароль')
-<<<<<<< HEAD
-            a(href="./chats.pug") 
-              input(type="button", value="Авторизоваться")
-          a(href="./registration.pug") нет аккаунта?
-=======
-            a(href="./chats.html") 
-              input(type="button", value="Авторизоваться")
-          a(href="./registration.html") нет аккаунта?
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
+extends ../components/header/header
+block templates
+  - const pageTitle = "Авторизация в Zenzuk"
+  - const style = "../styles/login.sass"
+block content
+  include ../components/main/main
+    script(type="module" src="../../src/components/Login/index.ts")
+    

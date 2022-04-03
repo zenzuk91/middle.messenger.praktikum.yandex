@@ -25,4 +25,15 @@ sass --watch src/styles:dist отслживание изменений в фай
 pug src/ --out dist --pretty отслеживание изменений в файлах проекта
 
 npm run dev запуск проекта для разработки
->>>>>>> 567fbabb93eb8a3590c8f6bb2c9e618e5ce78b05
+
+Спецификации HTML, CSS.
+Parcel
+Pug
+SASS
+Express
+NodeJS
+Eslint
+Stylelint
+EventBus
+Proxy
+Компоненты
