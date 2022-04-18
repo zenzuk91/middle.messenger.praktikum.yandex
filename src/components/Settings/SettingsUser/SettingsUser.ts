@@ -89,7 +89,7 @@ class SettingsUser extends Block<SettingsUserProps> {
         }),
         linkButton: new Button({
           buttonText: '',
-          customClass: 'button__settings',
+          customClass: 'button_settings',
           events: {
             click: () => {
               router.go("/settings");
@@ -98,7 +98,7 @@ class SettingsUser extends Block<SettingsUserProps> {
         }),
         ...props,
         addAvatarButton: new Button({
-          customClass: "settings__avatar-button",
+          customClass: "settings_avatar-button",
           buttonText: 'Поменять аватар',
           events: {
             click: () => this.handleClickEditAvatarButton(),

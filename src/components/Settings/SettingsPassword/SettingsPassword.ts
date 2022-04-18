@@ -51,7 +51,7 @@ export default class SettingsPassword extends Block<SettingsPasswordProps> {
         }),
         linkButton: new Button({
           buttonText: '',
-          customClass: 'button__settings',
+          customClass: 'button_settings',
           events: {
             click: () => {
               router.go("/settings");

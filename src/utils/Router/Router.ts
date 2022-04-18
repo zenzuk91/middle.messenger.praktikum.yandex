@@ -2,15 +2,15 @@ import Route from '../Route/Route';
 import Block from '../Block/Block';
 
 export default class Router {
-  static __instance: Router;
+  static _instance: Router;
   routes: Route[] = [];
   history: History = window.history;
   private _currentRoute: Route | null = null;
   private readonly _rootQuery: string;
 
   constructor(rootQuery: string) {
-    if (Router.__instance) {
-      return Router.__instance;
+    if (Router._instance) {
+      return Router._instance;
     }
 
     this.routes = [];
@@ -18,7 +18,7 @@ export default class Router {
     this._currentRoute = null;
     this._rootQuery = rootQuery;
 
-    Router.__instance = this;
+    Router._instance = this;
   }
 
   public use(pathname: string, block: typeof Block) {

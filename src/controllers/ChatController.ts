@@ -1,6 +1,6 @@
 import { chatApi } from '../api';
 import { store } from '../utils/Store';
-import ChatChat from '../components/Chat/ChatChat/ChatChat';
+import ChatList from '../components/Chat/ChatList/ChatList';
 import { SERVER_RESOURCES_BASE_URL } from '../config/config';
 
 class ChatController {
@@ -42,7 +42,7 @@ class ChatController {
         if(item?.last_message?.time){
           date = new Date(item.last_message.time);
         }
-        return new ChatChat({
+        return new ChatList({
           avatar: item.avatar && (SERVER_RESOURCES_BASE_URL + item.avatar),
           title: item.title,
           last_message: item.last_message && item.last_message.content,

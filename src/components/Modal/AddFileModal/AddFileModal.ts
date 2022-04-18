@@ -32,7 +32,6 @@ export default class AddFileModal extends Block<AddFileModalProps> {
   }
 
   public removeModal(e: Event) {
-    
     if (!e.target) {
       return;
     }

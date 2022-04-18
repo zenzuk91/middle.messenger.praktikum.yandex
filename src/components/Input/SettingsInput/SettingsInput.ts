@@ -1,10 +1,10 @@
 import { compile } from 'pug';
-import { Block } from '../../../utils/Block/index';
+import { Block } from '../../../utils/Block';
 import { settingInputTemplate } from './SettingInput.template';
-import { InputProps } from '../Input/Input.types';
+import { SettingsInputProps } from './SettingsInput.types';
 
-export default class SettingsInput extends Block<InputProps> {
-  public constructor(props: InputProps) {
+export default class SettingsInput extends Block<SettingsInputProps> {
+  public constructor(props: SettingsInputProps) {
     super(
       'div',
       {

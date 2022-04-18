@@ -81,7 +81,7 @@ class MessageController {
       store.set('messages', [
         new ChatMessage({
           time: ``,
-          customClass: 'chat__message-container_type-nomessage',
+          customClass: 'chat_message-container_type-nomessage',
           content: 'Сообщений нет',
           is_read: '',
           id: '',

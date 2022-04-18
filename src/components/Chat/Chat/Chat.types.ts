@@ -1,6 +1,5 @@
 import Button from '../../Button/Button/Button';
 import ChatList from '../ChatList/ChatList';
-import ChatProfile from '../ChatProfile/ChatProfile';
 import ChatMessage from '../ChatMessage/ChatMessage';
 import ChatMessageForm from '../ChatMessageForm/ChatMessageForm';
 import AddUserModal from '../../Modal/AddUserModal/AddUserModal';
@@ -8,15 +7,15 @@ import RemoveUserModal from '../../Modal/RemoveUserModal/RemoveUserModal';
 import AddGeoModal from '../../Modal/AddGeoModal/AddGeoModal';
 import AddFileModal from '../../Modal/AddFileModal/AddFileModal';
 import AddFotoModal from '../../Modal/AddFotoModal/AddFotoModal';
+import AddNewChatModal from '../../Modal/AddNewChatModal/AddNewChatModal';
 
 type ChatProps = {
   profileLinkTo?: string;
   profileLinkText?: string;
-  avatarSrc?: string;
+  avatar?: string;
   userInfo?: Record<string, unknown>;
-  ChatList?: ChatList | ChatList[];
-  chatProfile?: ChatProfile;
-  chatMessage?: ChatMessage | ChatMessage[];
+  chats?: ChatList | ChatList[];
+  messages?: ChatMessage | ChatMessage[];
   chatMessageForm?: ChatMessageForm;
   fileButton?: Button;
   userButton?: Button;
@@ -24,12 +23,17 @@ type ChatProps = {
   removeUserModal?: RemoveUserModal;
   addGeoModal?: AddGeoModal;
   addFileModal?: AddFileModal;
+  isOpenUserModal?: string,
+  isOpenFileModal?: string,
   addFotoModal?: AddFotoModal;
   addUserButton?: Button;
   removeUserButton?: Button;
   addFotoButton?: Button;
   addFileButton?: Button;
   addGeoButton?: Button;
+  linkButton?: Button;
+  addChat?: Button;
+  addNewChatModal?: AddNewChatModal;
 }
 
 export {

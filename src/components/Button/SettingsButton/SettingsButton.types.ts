@@ -9,6 +9,4 @@ type SettingsButtonProps = {
 
 export {
   SettingsButtonProps,
-
-}; 
-
+};

@@ -40,14 +40,14 @@ class Settings extends Block<SettingsProps> {
         }),
         buttonLogout: new Button({
           buttonText: 'Выйти',
-          customClass: 'settings__button settings__button_warning',
+          customClass: 'settings_button settings_button_warning',
           events: {
             click: () => this.handleLogout()
           }
         }),
         linkButton: new Button({
           buttonText: '',
-          customClass: 'button__settings',
+          customClass: 'button_settings',
           events: {
             click: () => {
               router.go("/messenger");

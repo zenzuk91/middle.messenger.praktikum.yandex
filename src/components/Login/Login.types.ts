@@ -1,7 +1,7 @@
 import Input from '../Input/Input/Input';
+import Button from '../Button/Button/Button';
 
 type LoginProps = {
-  formLinkText?: string;
   linkTo?: string;
   events?: {
     submit?: (e: Event) => void,
@@ -13,6 +13,7 @@ type LoginProps = {
   phoneInput?: Input;
   passwordInput?: Input;
   passwordSubmitInput?: Input;
+  linkButton? : Button;
 }
 
 export {

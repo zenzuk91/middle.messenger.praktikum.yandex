@@ -2,12 +2,12 @@ import { expect } from 'chai';
 import sinon from 'sinon';
 import Router from './Router';
 import Error404 from '../../components/Errors/Error404';
-import Authorization from '../../components/Authorization';
+import Login from '../../components/Login';
 
 describe('Проверяем переходы у Роута', () => {
   const router = new Router('.page');
   router
-    .use('/', Authorization)
+    .use('/', Login)
     .use('/404', Error404)
     .start();
 

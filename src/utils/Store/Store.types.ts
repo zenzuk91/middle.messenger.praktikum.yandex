@@ -1,4 +1,4 @@
-import { ChatChat } from '../../components/Chat/ChatChat';
+import { ChatList } from '../../components/Chat/ChatList';
 import { ChatMessage } from '../../components/Chat/ChatMessage';
 
 type State = {
@@ -12,7 +12,7 @@ type State = {
     phone: number | string,
     avatar: string,
   } | null,
-  chats: ChatChat[],
+  chats: ChatList[],
   messages: ChatMessage[],
   currentChatId?: string | number,
   token?: string,
