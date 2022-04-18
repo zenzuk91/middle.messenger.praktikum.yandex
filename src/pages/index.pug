@@ -1,8 +1,7 @@
 extends ../components/header/header
-block templates
-  - const pageTitle = "Авторизация в Zenzuk"
-  - const style = "../styles/login.sass"
+block variables
+  - const pageTitle = "Messenger"
+  - const style = "../styles/index.scss"
 block content
   include ../components/main/main
-    script(type="module" src="../../src/components/Login/index.ts")
-    
+  script(type="module" src="../../src/pages/index.ts")

@@ -1,9 +1,0 @@
-extends ../components/header/header
-block templates
-  - const pageTitle = "Страница не найдена - 404"
-  - const style = "../styles/error.sass"
-block content
-  include ../components/main/main
-    script(type="module" src="../../src/components/Errors/Error404/index.ts")
-
-
