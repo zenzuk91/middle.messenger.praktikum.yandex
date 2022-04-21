@@ -23,11 +23,11 @@ describe('SettingsApi', () => {
   it('Проверяем редактирование профиля', () => {
     const api = settingsApi;
     const data: EditProfileParameters = {
-      first_name: "demo3",
-      second_name: "demo3",
-      login: "demo3",
-      email: "demo3@mail.demo3",
-      phone: "3213213123123",
+      first_name: "Test",
+      second_name: "Test",
+      login: "test",
+      email: "test@gmail.com",
+      phone: "12345678910",
       display_name: 'demo3',
     };
 

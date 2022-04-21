@@ -23,8 +23,8 @@ describe('AuthApi', () => {
   it('Проверяем валидные данные в login', () => {
     const api = authApi;
     const data: LoginParameters = {
-      login: "demo3",
-      password: "demo3DEMO",
+      login: "test",
+      password: "qW1234",
     };
 
     api.login(data);
@@ -38,12 +38,12 @@ describe('AuthApi', () => {
   it('Проверяем валидные данные в register', () => {
     const api = authApi;
     const data: RegisterParameters = {
-      first_name: "demo3",
-      second_name: "demo3",
-      login: "demo3",
-      email: "demo3@mail.demo3",
-      password: "demo3DEMO",
-      phone: "3213213123123",
+      first_name: "Test",
+      second_name: "Test",
+      login: "test",
+      email: "test@gmail.com",
+      password: "qW1234",
+      phone: "12345678910",
     };
 
     api.register(data);

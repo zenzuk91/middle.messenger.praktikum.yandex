@@ -23,8 +23,8 @@ describe('HTTPTransport', () => {
   it('Проверяем метод post', () => {
     const api = new HTTPTransport('https://ya-praktikum.tech/api/v2/auth');
     const data: LoginParameters = {
-      login: "demo3",
-      password: "demo3DEMO",
+      login: "test",
+      password: "qW1234",
     };
     api.post('/post',{
       data: JSON.stringify(data)
@@ -48,8 +48,8 @@ describe('HTTPTransport', () => {
   it('Проверяем метод put', () => {
     const api = new HTTPTransport('https://ya-praktikum.tech/api/v2/auth');
     const data: LoginParameters = {
-      login: "demo3",
-      password: "demo3DEMO",
+      login: "test",
+      password: "qW1234",
     };
     api.put('/put',{
       data: JSON.stringify(data)
@@ -64,8 +64,8 @@ describe('HTTPTransport', () => {
   it('Проверяем метод patch', () => {
     const api = new HTTPTransport('https://ya-praktikum.tech/api/v2/auth');
     const data: LoginParameters = {
-      login: "demo3",
-      password: "demo3DEMO",
+      login: "test",
+      password: "qW1234",
     };
     api.patch('/patch',{
       data: JSON.stringify(data)
