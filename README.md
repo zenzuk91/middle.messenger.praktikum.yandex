@@ -1,7 +1,5 @@
 
-Проект сейчас находится на этапе MVP работают кнопки войти и зарегистрироваться(данные вводить не нужно). Чтобы при открытии чата появится ошибка 404. На странице профиля если попытаться изменить данные это вызовет ошибку 500.
-=======
- ссылка на второй pull requests https://github.com/zenzuk91/middle.messenger.praktikum.yandex/pull/3
+ cсылка на третий pull requests https://github.com/zenzuk91/middle.messenger.praktikum.yandex/pull/4
 ### Ветка, в которой делаете задания спринта, должна называться sprint_i, где i - номер спринта. Не переименовывайте её.
 
 
@@ -31,7 +29,10 @@ pug src/ --out dist --pretty отслеживание изменений в фа
 
 npm run dev запуск проекта для разработки
 
+npm run test Запуск тестов
+
 Спецификации HTML, CSS.
+
 Parcel
 Pug
 SASS
@@ -41,4 +42,14 @@ Eslint
 Stylelint
 EventBus
 Proxy
+
 Компоненты
+
+HTTPTransport
+Store
+Route
+Router
+Chai
+Mocha
+Sinon
+JSDom

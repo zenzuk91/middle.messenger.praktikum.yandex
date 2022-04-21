@@ -2,7 +2,6 @@ import EventBus from '../EventBus/EventBus';
 import set from '../helpers.set';
 import Block from '../Block/Block';
 import { State } from './Store.types';
-import isEqual from '../helpers.isEqual';
 
 export enum StoreEvents {
   Updated = 'updated',

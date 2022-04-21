@@ -28,6 +28,7 @@ class AuthController {
       console.log(error.message);
     }
   }
+  
   public async getUserInfo() {
     try {
       const result = await authApi.getUserInfo();
