@@ -88,7 +88,8 @@ class Chat extends Block<ChatProps> {
           },
         }),
         addChat: new Button({
-          customClass: 'chat_settings-button chat_settings-button_type-add-new-chat',
+          customClass: 'modal_form-submit-button',
+          buttonText: 'Добавить чат',
           events: {
             click: () => this.handleAddNewChat(),
           },

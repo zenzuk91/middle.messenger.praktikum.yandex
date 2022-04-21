@@ -8,10 +8,10 @@ export const chatTemplate =
           input.chat_input.chat_input_type-search(
             type="text"
             placeholder="Поиск"
-          )
-          | !{addChat}                
+          )                
         ul.chat_chats-list
          | !{chats}
+        | !{addChat}
       .chat_right-container
         .chat_settings
           .chat_settings-user-info-container

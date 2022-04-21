@@ -28,7 +28,7 @@ describe('SettingsApi', () => {
       login: "test",
       email: "test@gmail.com",
       phone: "12345678910",
-      display_name: 'demo3',
+      display_name: 'test',
     };
 
     api.editProfile(data);
@@ -57,7 +57,7 @@ describe('SettingsApi', () => {
   it('Проверяем получение пользователя по логину', () => {
     const api = settingsApi;
     const data: { login: string } = {
-      login: 'demo3'
+      login: 'Test'
     };
 
     api.getUserByLogin(data);

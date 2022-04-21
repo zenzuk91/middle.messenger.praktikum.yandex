@@ -1,7 +1,7 @@
 export const settingsUserTemplate =
   `section.settings
     .settings_avatar-container
-      img.settings_avatar(src=userInfo.avatar || 'https://i.gifer.com/Q2RE.gif', alt="Аватар")
+      img.settings_avatar(src=userInfo.avatar || ' ', alt="Аватар")
       | !{addAvatarButton}
     p.settings_user-name=userInfo.login
     form.settings_form-container.settings_form-container_padding-up(name="user-edit")
