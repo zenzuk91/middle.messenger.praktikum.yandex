@@ -39,7 +39,6 @@ export default class AddFileModal extends Block<AddFileModalProps> {
     if ((e.target as HTMLElement).classList.contains('modal')) {
       this.hide();
     }
-
   }
 
   public handleSubmit(e: Event) {

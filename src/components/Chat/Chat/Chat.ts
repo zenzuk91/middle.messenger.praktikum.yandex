@@ -15,7 +15,6 @@ import { ChatProps } from './Chat.types';
 import ImgChats from '../../../../static/img/img_chats.png';
 import ImgTumba from '../../../../static/img/tumba.jpeg';
 
-
 export default class Chat extends Block<ChatProps> {
   constructor() { 
     super(

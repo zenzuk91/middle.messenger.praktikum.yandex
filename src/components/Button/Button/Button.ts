@@ -1,5 +1,6 @@
 import { compile } from 'pug';
 import { Block } from '../../../utils/Block/index';
+
 import { buttonTemplate } from './Button.template';
 import { ButtonProps } from './Button.types';
 

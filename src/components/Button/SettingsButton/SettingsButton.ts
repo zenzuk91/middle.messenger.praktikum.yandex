@@ -16,8 +16,7 @@ export default class SettingsButton extends Block<SettingsButtonProps> {
   public render() {
     return this.compile(compile(settingsButtonTemplate), { ...this.props });
 
-
   } 
 
-  
+
 }

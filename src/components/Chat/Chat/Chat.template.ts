@@ -9,10 +9,8 @@ export const chatTemplate =
             type="text"
             placeholder="Поиск"
           )
-
         ul.chat_chats-list
          | !{ChatList}
-         
       .chat_right-container
         .chat_settings
           .chat_settings-user-info-container

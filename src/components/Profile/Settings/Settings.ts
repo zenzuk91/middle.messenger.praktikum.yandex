@@ -6,6 +6,7 @@ import SettingsPassword from '../SettingsPassword/SettingsPassword';
 import SettingsUser from '../UserProfile/UserProfile';
 import { SettingsProps } from './Settings.types';
 import ImgAvatar from '../../../../static/img/profile_avatar.png'
+
 export default class Settings extends Block<SettingsProps> {
   public constructor() {
     super(
