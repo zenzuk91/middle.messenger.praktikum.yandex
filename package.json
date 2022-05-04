@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "zenzuk",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": { 
     "@babel/core": "^7.17.8",
     "@babel/register": "^7.17.7",
     "@parcel/config-default": "2.2.1",
