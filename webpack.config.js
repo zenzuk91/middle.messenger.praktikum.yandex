@@ -2,18 +2,18 @@ const path = require('path');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/pages/index.ts', './src/styles/index.sass'],
+  entry: ['./src/pages/index.ts', './src/styles/style.sass'],
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: 'messenger.bundle.js',
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json', '.sass', 'pug', '.html'],
+    extensions: ['.ts', '.js', '.json', '.scss', 'pug', '.html'],
     fallback: {
       "path": false,
       "fs": false,
@@ -36,7 +36,7 @@ module.exports = {
         exclude: /(node_modules)/
       },
       {
-        test: /\.sass$/i,
+        test: /\.s[ac]ss$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -59,7 +59,7 @@ module.exports = {
       process: 'process/browser',
     }),
     new CleanWebpackPlugin(),
-    new htmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/pages/index.pug'),
       filename: 'index.html',
     }),
