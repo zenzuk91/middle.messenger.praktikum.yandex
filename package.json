@@ -13,12 +13,8 @@
     "type": "git",
     "url": "git+https://github.com/zenzuk91/middle.messenger.praktikum.yandex.git"
   },
-  "author": "",
+  "author": "zenzuk",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zenzuk91/middle.messenger.praktikum.yandex/issues"
-  },
-  "homepage": "https://github.com/zenzuk91/middle.messenger.praktikum.yandex#readme",
   "devDependencies": {
     "@babel/core": "7.17.8",
     "@babel/preset-env": "7.16.11",
