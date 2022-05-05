@@ -7,7 +7,7 @@ type ChatProfileProps = {
   chatName?: string;
   chatFavorite?: string;
   profileLinkText: string,
-  profileLinkTo: string
+  profileLinkTo: string,
 }
 
 export {

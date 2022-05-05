@@ -6,7 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: ['./src/pages/index.ts', './src/styles/index.sass'],
+  entry: ['./src/pages/index.ts', './src/styles/style.sass'],
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: 'messenger.bundle.js',

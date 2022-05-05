@@ -1,55 +1,78 @@
+# Проект Messenger
+  Веб приложение "Чат"
 
- cсылка на третий pull requests https://github.com/zenzuk91/middle.messenger.praktikum.yandex/pull/4
-### Ветка, в которой делаете задания спринта, должна называться sprint_i, где i - номер спринта. Не переименовывайте её.
+### Обзор
+* [Описание](#description)
+* [Инструкция](#instructions)
+* [Технологии](#technologies)
 
+#### <a name="description">Описание</a>
+* [Ссылка на макет в Figma](https://www.figma.com/file/OvZHFHkCe8HWUF0GcjF1Kd/Chat?node-id=1%3A498)
+* [Ссылка PR](https://github.com/zenzuk91/middle.messenger.praktikum.yandex/pull/5)
+* [Ссылка на heroku](https://zenzuks.herokuapp.com/)
 
-Дизайн-проект можно посмотреть по ссылке https://www.figma.com/file/OvZHFHkCe8HWUF0GcjF1Kd/Chat?node-id=1%3A498
+#### <a name="instructions">Инструкция</a>
+* [Ссылка на проект в Netlify](https://quirky-darwin-602093.netlify.app/)
 
-Netlify https://quirky-darwin-602093.netlify.app/
+##### Запуск
 
-Для запуска проекта необходимо ввести команду npm run start
+```
+npm install
+npm run start / npm run dev
+```
 
-При создании проекта использовался шаблонизатор pug и sass
+##### Запуск тестов
 
-Были использованыследующие команды для подключения и настройки рабочего пространства 
+```
+npm run test
+```
 
-npm install node --save-dev установка nodjs
+##### Запуск docker контейнера
 
-npm install parcel --save-dev установка parcel
+###### Сборка
+```
+docker build . -t zenzuks
+```
 
-npm install express --save-dev установка express
+###### Запуск в фоне
 
-npm install pug установка шаблонизатора pug
+```
+docker run -p 3000:3000 -d zenzuks
+```
 
-npm install -g sass установка препроцессора sass
+###### Остановка
 
-sass --watch src/styles:dist отслживание изменений в файлах стилей
+```
+docker ps
+docker stop -t 0 <container id>
+```
 
-pug src/ --out dist --pretty отслеживание изменений в файлах проекта
+###### Удаление
 
-npm run dev запуск проекта для разработки
+```
+docker ps
+docker container rm <container id>
+```
 
-npm run test Запуск тестов
-
-Спецификации HTML, CSS.
-
-Parcel
-Pug
-SASS
-Express
-NodeJS
-Eslint
-Stylelint
-EventBus
-Proxy
-
-Компоненты
-
-HTTPTransport
-Store
-Route
-Router
-Chai
-Mocha
-Sinon
-JSDom
+#### <a name="technologies">Технологии</a>
+* Спецификации HTML, CSS.
+* Parcel
+* Pug
+* SASS
+* Express
+* NodeJS
+* Eslint
+* Stylelint
+* EventBus
+* Proxy
+* Компоненты
+* HTTPTransport
+* Store
+* Route
+* Router
+* Chai
+* Mocha
+* Sinon
+* JSDom
+* Docker
+* Webpack
