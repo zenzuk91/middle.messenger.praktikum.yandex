@@ -22,9 +22,7 @@ export default class ChatProfile extends Block<ChatProfileProps> {
       elem.classList.remove('chat_chat-container_selected')
     });
 
-    this.setProps({
-      "isSelected": "true"
-    })
+    
   }
 
  public render() {
