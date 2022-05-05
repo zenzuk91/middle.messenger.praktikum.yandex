@@ -1,6 +1,6 @@
 import Router from './../utils/Router/Router';
 import Chat from './../components/Chat/Chat/index';
-import Login from '../components/Login';
+import Login from '../components/Login/index';
 import Registration from '../components/Registration';
 import Settings from '../components/Settings/Settings';
 import Error404 from '../components/Errors/Error404';
