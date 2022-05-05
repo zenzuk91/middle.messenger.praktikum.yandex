@@ -13,7 +13,7 @@ module.exports = {
     publicPath: '/',
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json', '.scss', 'pug', '.html'],
+    extensions: ['.ts', '.js', '.json', '.sass', 'pug', '.html'],
     fallback: {
       "path": false,
       "fs": false,
