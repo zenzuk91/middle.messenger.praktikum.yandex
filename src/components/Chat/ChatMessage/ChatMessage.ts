@@ -1,5 +1,5 @@
 import { compile } from 'pug';
-import { Block } from '../../../utils/Block/index';
+import { Block } from '../../../utils/Block';
 import { chatMessageTemplate } from './ChatMessage.template';
 import { ChatMessageProps } from './ChatMessage.types';
 

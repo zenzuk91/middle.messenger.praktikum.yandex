@@ -6,5 +6,5 @@ export const chatMessageFormTemplate = `form.chat_form(name="message")
        required="true"
        autocomplete="off"
        value=value
-     )    
+     ) 
      button.chat_settings-button.chat_settings-button_type-modal.chat_settings-button_type-send`;

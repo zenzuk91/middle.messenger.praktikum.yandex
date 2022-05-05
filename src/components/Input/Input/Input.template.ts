@@ -8,5 +8,6 @@ export const inputTemplate = `label.form_label #{labelName}
       minlength=minlength
       maxlength=maxlength
       pattern=pattern
+      enctype=enctype || ''
     )
     span.form_input-error #{inputErrorText}`;

@@ -1,9 +1,6 @@
 import { compile } from 'pug';
 import { Block } from '../../../utils/Block/index';
 import { chatTemplate } from './Chat.template';
-import { ChatList } from '../ChatList/index';
-import { ChatProfile } from '../ChatProfile/index';
-import ChatMessage from '../ChatMessage/ChatMessage';
 import { ChatMessageForm } from '../ChatMessageForm/index';
 import Button from '../../Button/Button/Button';
 import AddUserModal from '../../Modal/AddUserModal/AddUserModal';
@@ -12,112 +9,27 @@ import AddGeoModal from '../../Modal/AddGeoModal/AddGeoModal';
 import AddFileModal from '../../Modal/AddFileModal/AddFileModal';
 import AddFotoModal from '../../Modal/AddFotoModal/AddFotoModal';
 import { ChatProps } from './Chat.types';
-import ImgChats from '../../../../static/img/img_chats.png';
-import ImgTumba from '../../../../static/img/tumba.jpeg';
+import { router } from '../../../pages';
+import { store } from '../../../utils/Store';
+import AddNewChatModal from '../../Modal/AddNewChatModal/AddNewChatModal';
+import { chatController } from '../../../controllers';
 
-export default class Chat extends Block<ChatProps> {
-  constructor() { 
+class Chat extends Block<ChatProps> {
+  constructor() {
     super(
       'div',
       {
-        profileLinkTo: './profile.html',
-        profileLinkText: 'Профиль',
-        avatarSrc: ImgChats,
         userInfo: {
-          first_name: 'Андрей',
-          email: 'pochta@ya.ru',
-          login: 'zenzuk',
-          second_name: 'Колесников',
-          display_name: 'zenzuk',
-          phone: '+7 (989) 527 86 95',
+          first_name: '',
+          email: '',
+          login: '',
+          second_name: '',
+          display_name: '',
+          phone: '',
+          avatar: '',
         },
-          chatProfile: 
-            new ChatProfile({
-              avatarSrc: ImgChats,
-              chatName: 'Zenzuk',
-              chatFavorite: 'Избранное',
-              profileLinkText: 'Профиль',
-              profileLinkTo: './profile.html',
-          }),
-        ChatList: [ 
-          new ChatList({ 
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 1',
-            chatLastMessage: 'Сообщение 1',
-            chatDate: 'пт',
-            chatMessageCount: '2'
-          }),
-          new ChatList({
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 2',
-            chatLastMessage: 'Сообщение 1',
-            chatDate: 'пт',
-            chatMessageCount: '1',
-          }),
-          new ChatList({
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 3',
-            chatLastMessage: 'Сообщение 1',
-            chatDate: 'пт',
-            chatMessageCount: '21',
-          }),
-          new ChatList({
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 4',
-            chatLastMessage: 'Изображение',
-            chatDate: 'пт',
-            chatMessageCount: '15',
-          }),
-          new ChatList({
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 5',
-            chatLastMessage: 'Сообщение 1',
-            chatDate: 'пт',
-            chatMessageCount: '2',
-          }),
-          new ChatList({
-            avatarSrc: ImgChats,
-            chatName: 'Пользователь 6',
-            chatLastMessage: 'Сообщение 1',
-            chatDate: 'пт',
-            chatMessageCount: '2',
-          }),
-        ],
-        chatMessage: [
-          new ChatMessage({
-            message: 'Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!Привет!',
-            time: 'ПТ',
-            imgSrc: '',
-          }),
-          new ChatMessage({
-            message: 'Привет!',
-            time: 'ПТ',
-            imgSrc: '',
-          }),
-          new ChatMessage({
-            message: 'Привет!',
-            time: 'ПТ',
-            imgSrc: '',
-          }),
-          new ChatMessage({
-            message: 'Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! Хай! ',
-            time: '00:00',
-            isUserMessage: 'true',
-            isChecked: 'true',
-          }),
-          new ChatMessage({
-            message: 'Привет!',
-            time: 'ПТ',
-            imgSrc: ImgTumba,
-          }),
-          
-          new ChatMessage({
-            message: 'Хай!',
-            time: '00:01',
-            isUserMessage: 'true',
-            isChecked: 'true',
-          })
-        ],
+        chats: [],
+        messages: [],
         chatMessageForm: new ChatMessageForm({}),
         fileButton: new Button({
           customClass: 'chat_settings-button chat_settings-button_type-modal chat_settings-button_type-select',
@@ -165,47 +77,76 @@ export default class Chat extends Block<ChatProps> {
           events: {
             click: () => this.handleClickAddGeoButton(),
           },
-        })
+        }),
+        linkButton: new Button({
+          buttonText: 'Профиль',
+          customClass: 'button_profile',
+          events: {
+            click: () => {
+              router.go("/settings");
+            }
+          },
+        }),
+        addChat: new Button({
+          customClass: 'modal_form-submit-button',
+          buttonText: 'Добавить чат',
+          events: {
+            click: () => this.handleAddNewChat(),
+          },
+        }),
+        addNewChatModal: new AddNewChatModal({}),
       },
     );
   }
 
+  async componentDidMount() {
+    await chatController.getChats()
+  }
+
+  handleAddNewChat() {
+    const modal = document.querySelector('[data-modal-name=add-chat]');
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
+    }
+    return;
+  }
+
   handleClickAddGeoButton() {
     const modal = document.querySelector('[data-modal-name=add-geo]');
-    if(modal){
-      (modal! as HTMLElement).style.display ="flex";
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
     }
     return;
   }
 
   handleClickAddFileButton() {
     const modal = document.querySelector('[data-modal-name=add-file]');
-    if(modal){
-      (modal! as HTMLElement).style.display ="flex";
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
     }
     return;
   }
 
   handleClickAddFotoButton() {
     const modal = document.querySelector('[data-modal-name=add-foto]');
-    if(modal){
-      (modal! as HTMLElement).style.display ="flex";
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
     }
     return;
   }
 
   handleClickAddUserButton() {
     const modal = document.querySelector('[data-modal-name=add-user]');
-    if(modal){
-      (modal! as HTMLElement).style.display ="flex";
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
     }
     return;
   }
 
   handleClickRemoveUserButton() {
     const modal = document.querySelector('[data-modal-name=remove-user]');
-    if(modal){
-      (modal! as HTMLElement).style.display ="flex";
+    if (modal) {
+      (modal! as HTMLElement).style.display = "flex";
     }
     return;
   }
@@ -241,9 +182,10 @@ export default class Chat extends Block<ChatProps> {
       login: formData.get('login'),
       password: formData.get('password'),
     };
-    if(e.target) {
+    if (e.target) {
       const formIsValid = (e.target as HTMLFormElement).closest('form')!.checkValidity();
       if (formIsValid) {
+        console.log(store.getState());
         console.log(data);
       }
     }
@@ -253,3 +195,5 @@ export default class Chat extends Block<ChatProps> {
     return this.compile(compile(chatTemplate), { ...this.props });
   }
 }
+
+export default Chat;

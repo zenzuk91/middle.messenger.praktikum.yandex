@@ -1,6 +1,4 @@
-export const error500Template = `div.error
-     h1=errorTitleMessage
-     h2=errorSubtitleMessage
-     a.error_link(href=linkTo)=errorLinkText`;
-     
-   
+export const error500Template = `section.error
+     p.error_title=errorTitleMessage
+     p.error_subtitle=errorSubtitleMessage
+     | !{linkButton}`;
